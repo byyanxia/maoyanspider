@@ -19,7 +19,7 @@ def save():
         file.close()
 def post():
     localtime = time.asctime(time.localtime(time.time()))
-    url_3 = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww3824074e5066621d&corpsecret=9ygXveqCE9sugRzyaqKWVn3WSpH41fl4XWEtpuGZgc4"
+    url_3 = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=填AgentId&corpsecret=填Secret"
     r = requests.get(url_3, headers=headers, timeout=1).content.decode('utf-8')
     r = json.loads(r)  # 将json格式数据转换为字典
     token = r["access_token"]
